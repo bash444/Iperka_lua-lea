@@ -1,6 +1,5 @@
 .back-button {
     display: inline-block;
-    margin-bottom: 20px;
     padding: 10px 20px;
     background-color: #00ff11;
     color: white;
@@ -10,6 +9,11 @@
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .back-button:hover {
