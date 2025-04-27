@@ -2,24 +2,67 @@
 <html lang="de">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/css/backbutton.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <script src="/js/script.js" defer></script>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
+            font-family: 'Ubuntu', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
         }
+        .header {
+            background-color: rgb(38, 139, 204);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
         h1 {
-            text-align: center;
-            margin-bottom: 40px;
+            color: white;
+            font-size: 2rem;
+            margin: 0;
+        }
+        .back {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(11, 15, 152, 0.748);
+            width: 70px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1100;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1rem;
+        }
+        .back:hover {
+            background-color: rgba(7, 11, 147, 0.5);
         }
         .gallery {
+            margin-top: 110px;
+            padding: 20px;
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
@@ -31,6 +74,10 @@
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -38,8 +85,11 @@
 <body>
 
     <div class="header">
-        <a href="index.html" class="back-button">Zurück</a>
         <h1>Galerie</h1>
+    </div>
+
+    <div class="back">
+        <a href="index.html">Zurück</a>
     </div>
 
     <div class="gallery">
@@ -74,4 +124,5 @@
     </div>
 
 </body>
+
 </html>
